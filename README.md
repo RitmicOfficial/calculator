@@ -7,3 +7,6 @@ Usage:
 1. Download the `calculator.py` file to your computer.
 2. Run it in the terminal: `python calculator.py`
 3. Enter the numbers and the operation as requested.
+
+Open-source project — feel free to use and improve it.
+
