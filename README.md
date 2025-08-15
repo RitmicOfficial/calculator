@@ -1,4 +1,4 @@
-# 🟰Simple Calculator
+# 🟰 Simple Calculator
 
 This project is a simple calculator written in Python.
 It can perform addition, subtraction, multiplication, and division.
