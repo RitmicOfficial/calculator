@@ -18,3 +18,5 @@ elif operation == "/":
     print("Result:", num1 / num2)
 else:
     print("Invalid operation")
+
+input("Press Enter to exit...")
