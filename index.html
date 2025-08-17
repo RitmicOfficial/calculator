@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding-top: 50px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 400px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 60px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input, select, button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #005fa3;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="ritmic.png" alt="Logo" class="logo">
+    <h1>Simple Calculator</h1>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <select id="operation">
+      <option value="+">Addition (+)</option>
+      <option value="-">Subtraction (-)</option>
+      <option value="*">Multiplication (*)</option>
+      <option value="/">Division (/)</option>
+    </select>
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br>
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function calculate() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const op = document.getElementById('operation').value;
+      let res = '';
+
+      if (isNaN(num1) || isNaN(num2)) {
+        res = 'Please enter valid numbers!';
+      } else {
+        switch(op) {
+          case '+': res = num1 + num2; break;
+          case '-': res = num1 - num2; break;
+          case '*': res = num1 * num2; break;
+          case '/': res = num2 !== 0 ? num1 / num2 : 'Cannot divide by zero'; break;
+          default: res = 'Invalid operation';
+        }
+      }
+
+      document.getElementById('result').textContent = "Result: " + res;
+    }
+  </script>
+</body>
+</html>
