@@ -1,12 +1,17 @@
 # 🟰 Simple Calculator
 
-This project is a simple calculator written in Python.
-It can perform addition, subtraction, multiplication, and division.
+This is a simple web-based calculator built while learning coding.  
+It allows users to perform basic arithmetic operations:
 
-Usage:
-1. Download the `calculator.py` file to your computer.
-2. Run it in the terminal: `python calculator.py`
-3. Enter the numbers and the operation as requested.
+- Addition (+)
+- Subtraction (-)
+- Multiplication (*)
+- Division (/)
+
+## Features
+- Enter two numbers
+- Select an operation
+- Click "Calculate" to see the result
+- Simple, clean, and user-friendly interface
 
 Open-source project — feel free to use and improve it.
-
