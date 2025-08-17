@@ -14,4 +14,4 @@ It allows users to perform basic arithmetic operations:
 - Click "Calculate" to see the result
 - Simple, clean, and user-friendly interface
 
-Open-source project — feel free to use and improve it.
+Open-source project - feel free to use and improve it.
