@@ -34,5 +34,3 @@ It includes basic arithmetic as well as advanced operations.
 2. Follow the prompts in the console  
 
 Open-source project - feel free to use and improve it.
-
-Open-source project - feel free to use and improve it.
