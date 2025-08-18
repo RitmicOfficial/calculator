@@ -7,12 +7,11 @@ print("Subtraction: -")
 print("Multiplication: *")
 print("Division: /")
 print("Power: ^")
-print("Modulo (remainder): %")
 print("Square root: sqrt")
 print("Greatest Common Divisor (GCD): gcd")
 print("Least Common Multiple (LCM): lcm")
 
-operation = input("Choose an operation (+, -, *, /, ^, %, sqrt, gcd, lcm): ")
+operation = input("Choose an operation (+, -, *, /, ^, sqrt, gcd, lcm): ")
 
 # Square root requires only one number
 if operation == "sqrt":
