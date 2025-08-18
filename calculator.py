@@ -7,7 +7,7 @@ print("Subtraction: -")
 print("Multiplication: *")
 print("Division: /")
 print("Power: ^")
-print("Square root: sqrt")
+print("Square Root: sqrt")
 print("Greatest Common Divisor (GCD): gcd")
 print("Least Common Multiple (LCM): lcm")
 
