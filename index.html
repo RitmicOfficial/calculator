@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ritmic | Simple Calculator</title>
-     <!-- Favicon -->
+  <title>Ritmic | Advanced Calculator</title>
   <link rel="icon" type="image/png" href="ritmic.ico">
   <style>
     body {
@@ -22,7 +21,7 @@
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      width: 400px;
+      width: 450px;
       text-align: center;
     }
 
@@ -67,16 +66,22 @@
 <body>
   <div class="container">
     <img src="ritmic.png" alt="Logo" class="logo">
-    <h1>Simple Calculator</h1>
+    <h1>Advanced Calculator</h1>
 
     <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br>
     <select id="operation">
       <option value="+">Addition (+)</option>
       <option value="-">Subtraction (-)</option>
       <option value="*">Multiplication (*)</option>
       <option value="/">Division (/)</option>
+      <option value="^">Power (^)</option>
+      <option value="%">Modulo (%)</option>
+      <option value="sqrt">Square Root (√)</option>
+      <option value="gcd">GCD (EBOB)</option>
+      <option value="lcm">LCM (EKOK)</option>
     </select>
-    <input type="number" id="num2" placeholder="Enter second number">
     <br>
     <button onclick="calculate()">Calculate</button>
 
@@ -85,21 +90,50 @@
 
   <script>
     function calculate() {
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      const op = document.getElementById('operation').value;
+      let num1 = parseFloat(document.getElementById('num1').value);
+      let num2 = parseFloat(document.getElementById('num2').value);
+      let op = document.getElementById('operation').value;
       let res = '';
 
-      if (isNaN(num1) || isNaN(num2)) {
-        res = 'Please enter valid numbers!';
-      } else {
-        switch(op) {
-          case '+': res = num1 + num2; break;
-          case '-': res = num1 - num2; break;
-          case '*': res = num1 * num2; break;
-          case '/': res = num2 !== 0 ? num1 / num2 : 'Cannot divide by zero'; break;
-          default: res = 'Invalid operation';
-        }
+      function gcd(a, b) {
+        if (!b) return a;
+        return gcd(b, a % b);
+      }
+
+      function lcm(a, b) {
+        return Math.abs(a * b) / gcd(a, b);
+      }
+
+      switch(op) {
+        case '+':
+          res = num1 + num2;
+          break;
+        case '-':
+          res = num1 - num2;
+          break;
+        case '*':
+          res = num1 * num2;
+          break;
+        case '/':
+          res = num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
+          break;
+        case '^':
+          res = Math.pow(num1, num2);
+          break;
+        case '%':
+          res = num1 % num2;
+          break;
+        case 'sqrt':
+          res = num1 >= 0 ? Math.sqrt(num1) : 'Cannot take square root of negative number';
+          break;
+        case 'gcd':
+          res = gcd(Math.floor(num1), Math.floor(num2));
+          break;
+        case 'lcm':
+          res = lcm(Math.floor(num1), Math.floor(num2));
+          break;
+        default:
+          res = 'Invalid operation';
       }
 
       document.getElementById('result').textContent = "Result: " + res;
