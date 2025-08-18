@@ -12,8 +12,8 @@ It includes basic arithmetic as well as advanced operations.
 ## Advanced Operations
 - Power (Exponent) (^)  
 - Square Root (√)  
-- Greatest Common Divisor (GCD / EBOB)  
-- Least Common Multiple (LCM / EKOK)
+- Greatest Common Divisor (GCD)  
+- Least Common Multiple (LCM)
 
 ## Features
 - Enter one or two numbers depending on the operation  
